@@ -9,10 +9,11 @@ import os
 # change Connected String and Excel Name
 # change table name as per desired choice
 # Thats it !!! Way to go
+# Update the python modules before using this script, Might end up in some random errors
 
 connected_string = 'postgresql+psycopg2://postgres:5388@localhost:5432/postgres' #change
 connected_db = create_engine(connected_string)
-Excel_Name = 'More_Than_Avt_8500_Rows.xlsx' #change
+Excel_Name = 'Source File - Excel.xlsx' #change to ur desired excel name, must be in same folder
 os.system('cls')
 print("Started Executing !!!")
 time.sleep(2)
@@ -27,8 +28,8 @@ print("Total Rows : ",total_rows)
 del connected_wb
 del connected_ws
 
-divide_range = 1000 #change
-table_name ='Netflix01' #change
+divide_range = 5000 #change this batch value, data will be loaded and stored by batch-by-batch
+table_name ='Supermarket01' #change to ur desired table name
 divide_value = 0
 extract_value = divide_value
 batch_number = 0
